@@ -28,7 +28,7 @@ public class PeopleViewModel : INotifyPropertyChanged
 
     public PeopleViewModel()
     {
-        LoadPeopleCommand = new RelayCommand(_ => LoadPeople());
+        LoadPeopleCommand = new RelayCommand(_ => LoadPeople(), _ => { return true; });
     }
 
     public void LoadPeople()
